@@ -1,0 +1,60 @@
+[
+    {
+        "id":0,
+        "productName":"fresh avocads",
+
+        "image":"🥑",
+
+        "from":"spain",
+
+        "nutrients":"Vitamin B , Vitamin K",
+
+        "quantity":"4🥑",
+
+        "price":"6.50",
+
+        "organic":true,
+
+        "description":"A ripe avocado yields to gentele pressure when held in the palm of the hand and sqeeze>the friuit is not sweet"
+
+
+    },
+    {
+        "id":1,
+        "productName":"fresh oranges",
+        "image":"🥑",
+        "from":"spain",
+        "nutrients":"Vitamin B , Vitamin K",
+ 
+        "quantity":"4🥑",
+
+        "price":"6.50",
+
+        "organic":true,
+
+        "description":"A ripe avocado yields to gentele pressure when held in the palm of the hand and sqeeze>the friuit is not sweet"
+
+
+    },
+    {
+        "id":2,
+
+        "productName":"fresh mango",
+
+        "image":"🥑",
+
+        "from":"spain",
+
+        "nutrients":"Vitamin B , Vitamin K",
+
+        "quantity":"4🥑",
+
+        "price":"6.50",
+
+        "organic":true,
+
+        "description":"A ripe avocado yields to gentele pressure when held in the palm of the hand and sqeeze>the friuit is not sweet"
+
+    }
+
+]
