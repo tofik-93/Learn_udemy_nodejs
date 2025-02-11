@@ -41,4 +41,11 @@ router.get('/', (req, res, next)=>{
     next()
 })
 
-app.use(router)
+app.use(router) 
+
+app.get('/radom.text',(req,res)=>{
+    res.send('random.text')
+})
+app.get('/ad*cd',(req,res)=>{
+    res.send('ab * cd')
+})
