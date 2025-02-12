@@ -14,7 +14,7 @@ while(!resourse.isEmpty()){
             continue
         }
         if (data === RESOURCE_CLOSED){
-            //the resource is closed remove it from the list
+            //the resource is closed remove it from the list 
             resources.remove(resource)
             
         } else {
@@ -22,4 +22,22 @@ while(!resourse.isEmpty()){
             consumeData(data)
         }
     }
+} 
+
+
+watchedList.add(socketA,FOR_READ)
+watchedList.add(socketB,FOR_READ)
+while(event = demultiplexer(watchedList)){
+    //event lop
+  for (event of events){
+    // the resourse was closed, remove it from the wathed the list  
+    data= event.resource.read()
+    if(data === RESOURCE_CLOSED){
+        // the resourse was closed, remove it form the watched list 
+        demultiplexer.unwatch(event.resource)
+    }else{
+        //some actual data was received, proess it 
+        consumerData(data)
+    }
+  }
 }
