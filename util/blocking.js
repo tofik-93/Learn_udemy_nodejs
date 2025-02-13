@@ -40,4 +40,7 @@ while(event = demultiplexer(watchedList)){
         consumerData(data)
     }
   }
-}
+} // the application genrates a new I/O operation by submitting a request to the Event Demultiplexer.
+//when  aset of I/O operations complets the event demultiplexer push a set of corresponding event into the Event Queue
+// At theis point the EVent loop itterates ober the iteam of the Event Quence
+//For each event the associated handler is invoked
