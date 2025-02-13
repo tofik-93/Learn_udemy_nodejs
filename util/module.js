@@ -1,13 +1,27 @@
-const myModule = (()=>{
-    const privateFoo = ()=>{}
-    const privateBar = []
+const myModule = (() => {
+    // Private variables and functions
+    const privateFoo = () => {
+        console.log("Private Foo");
+    };
 
+    const privateBar = [];
+
+    // Public API (exported object)
     const exported = {
-        publicFoo: ()=>{},
-        publicBar: ()=>{}
-    }
-    return exported 
-})// once the parenthsis here parsed the function will be invoked
+        publicFoo: () => {
+            console.log("Public Foo");
+        },
+        publicBar: () => {
+            console.log("Public Bar");
+        }
+    };
 
-console.log(myModule)
-console.log(myModule.publicFoo, myModule.privateBar)
+    // Return the exported object
+    return exported;
+})(); // The function is invoked immediately
+
+// Testing the module
+console.log(myModule); // Logs the exported object
+console.log(myModule.privateFoo, myModule.privateBar); // Logs undefined for private members
+myModule.publicFoo(); // Calls the public method
+myModule.publicBar(); // Calls the public method
