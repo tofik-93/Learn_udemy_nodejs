@@ -109,3 +109,26 @@ console.log(myModule)
 // function require (moduleName){
     
 // }
+function require (moduleName){
+    console.log(`Require invoked for the module:${moduleName}`)
+    const id = require.resolve(moduleName)
+    if(require.cache[id]){
+        return require.cache[id].exports
+    }
+    //Module metadata
+    const module = {
+        exports:{},
+        id
+    }
+    //Update the cache
+    require.cache[id]= module
+
+    //loadModule(id, module,require)
+    loadModule(id,module,require)
+    return module.exports   
+}
+require.cache = {}
+
+require.resolve = (moduleName) =>{  
+}
+
