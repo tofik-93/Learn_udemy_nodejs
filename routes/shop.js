@@ -1,9 +1,9 @@
 const  path = require('path')
 
-
-
-
 const express = require('express');
+
+const productsController = require('../control')
+
 const router = express.Router();
 
 // Define routes (example)
@@ -12,3 +12,4 @@ res.sendFile(path.join(__dirname,'../', 'views', 'shop.html'))}
 );
 
 module.exports = router; 
+
